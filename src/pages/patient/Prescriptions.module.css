@@ -1,0 +1,259 @@
+/* ─── Container ──────────────────────────────────────────────────── */
+.container {
+  padding: var(--spacing-lg);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--spacing-xl);
+  }
+}
+
+/* ─── Page Header ────────────────────────────────────────────────── */
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* ─── Prescriptions List ─────────────────────────────────────────── */
+.prescriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* ─── Prescription Card ──────────────────────────────────────────── */
+.prescriptionCard {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition:
+    box-shadow var(--transition-normal),
+    transform var(--transition-spring);
+}
+
+.prescriptionCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* ─── Card Header ────────────────────────────────────────────────── */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-md);
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--gradient-surface);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-width: 0;
+}
+
+.doctorMeta {
+  min-width: 0;
+}
+
+.doctorMeta h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0 0 3px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.specialty {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.prescriptionDate {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+/* ─── Medications Section ────────────────────────────────────────── */
+.medications {
+  padding: var(--spacing-lg);
+}
+
+.sectionLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* ─── Medications Table ──────────────────────────────────────────── */
+.medTableWrapper {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.medTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.medTable thead {
+  background: var(--color-bg-secondary);
+}
+
+.medTable th {
+  text-align: left;
+  padding: 10px var(--spacing-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.medTable td {
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-divider);
+  vertical-align: middle;
+}
+
+.medTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.medTable tbody tr:nth-child(even) {
+  background-color: var(--color-bg-secondary);
+}
+
+.medTable tbody tr:hover {
+  background-color: var(--color-primary-subtle);
+}
+
+.medName {
+  font-weight: var(--font-weight-semibold);
+}
+
+.medDosage {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+/* ─── Notes Section ──────────────────────────────────────────────── */
+.notesSection {
+  margin: 0 var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-border-strong);
+}
+
+.notesSection .sectionLabel {
+  margin-bottom: var(--spacing-xs);
+}
+
+.notesText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ─── Empty State ────────────────────────────────────────────────── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--color-border);
+  text-align: center;
+  gap: var(--spacing-sm);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  opacity: 0.35;
+}
+
+.emptyState h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.emptyState p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  max-width: 320px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .headerRight {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .medTableWrapper {
+    overflow-x: auto;
+  }
+
+  .medTable {
+    min-width: 480px;
+  }
+}

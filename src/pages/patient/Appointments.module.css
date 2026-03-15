@@ -1,0 +1,266 @@
+/* ─── Container ──────────────────────────────────────────────────── */
+.container {
+  padding: var(--spacing-lg);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--spacing-xl);
+  }
+}
+
+/* ─── Page Header ────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* ─── Tab Bar ────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--color-border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  position: relative;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: none;
+  border: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+  bottom: -2px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+  color: var(--color-text);
+}
+
+.tab.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  border-bottom-color: var(--color-primary);
+}
+
+.tabCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  margin-left: 6px;
+}
+
+.tab.active .tabCount {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+/* ─── Appointments List ──────────────────────────────────────────── */
+.appointmentList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* ─── Appointment Card ───────────────────────────────────────────── */
+.appointmentCard {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  transition:
+    box-shadow var(--transition-normal),
+    transform var(--transition-spring);
+}
+
+.appointmentCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* ─── Date Box ───────────────────────────────────────────────────── */
+.dateBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 72px;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-primary-sm);
+  gap: 2px;
+}
+
+.dayNumber {
+  font-size: 26px;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.monthName {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  opacity: 0.9;
+}
+
+/* ─── Appointment Info ───────────────────────────────────────────── */
+.appointmentInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.appointmentInfo h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0 0 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clinicName {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin: 0 0 var(--spacing-xs) 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.timeLine {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.timeIcon {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ─── Card Actions ───────────────────────────────────────────────── */
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+/* ─── Empty State ────────────────────────────────────────────────── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--color-border);
+  text-align: center;
+  gap: var(--spacing-sm);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  opacity: 0.35;
+}
+
+.emptyState h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.emptyState p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  max-width: 320px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .appointmentCard {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .dateBox {
+    width: 100%;
+    height: 56px;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+  }
+
+  .dayNumber {
+    font-size: 22px;
+  }
+
+  .cardActions {
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cardActions > * {
+    flex: 1;
+  }
+}

@@ -1,0 +1,111 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.brand {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.userName {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.logoutBtn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.logoutBtn:hover {
+  background-color: var(--color-error);
+  border-color: var(--color-error);
+  color: white;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+}
+
+.nav {
+  display: none;
+  width: 240px;
+  background-color: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+  padding: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  margin-bottom: var(--spacing-xs);
+}
+
+.navItem:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+}
+
+.navItem.active {
+  background-color: rgba(229, 57, 53, 0.1);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.navIcon {
+  font-size: var(--font-size-lg);
+}
+
+.content {
+  flex: 1;
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-secondary);
+  overflow-y: auto;
+}
+
+.pageTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}

@@ -1,0 +1,438 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Top row ── */
+.topRow {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.welcomeArea {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.welcomeTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Stat cards — 2×2 grid */
+.statsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  min-height: 88px;
+}
+
+.statLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.statIconWrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statValue {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.statSub {
+  font-size: 13px;
+  font-weight: 400;
+  color: #888;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.statGrowth {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.growthUp {
+  color: #43A047;
+  font-weight: 600;
+}
+
+.statAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #888;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.statAction:hover { color: #444; }
+
+/* Clinic image card */
+.clinicImageCard {
+  width: 200px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+.clinicImagePlaceholder {
+  flex: 1;
+  min-height: 140px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clinicImageFooter {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.clinicFooterLogo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+
+.homeBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.homeBtn:hover { color: #111; }
+
+/* ── Bottom grid ── */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Panel */
+.panel {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.panelTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.panelLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #888;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+}
+
+.panelLink:hover { color: #333; }
+
+/* Doctor list */
+.doctorList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doctorRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doctorAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ececec;
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doctorInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.doctorName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doctorSpec {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.doctorFee {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
+
+.doctorActions {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+
+.editBtn {
+  height: 34px;
+  padding: 0 16px;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+
+.editBtn:hover { filter: brightness(1.08); }
+
+.arrowBtn {
+  width: 34px;
+  height: 34px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter 0.15s;
+  border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+.arrowBtn:hover { filter: brightness(1.08); }
+
+/* Appointments */
+.appointmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.apptRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.patientAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ececec;
+  color: #555;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.apptTime {
+  flex-shrink: 0;
+  width: 72px;
+}
+
+.apptTimeMain {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.apptTimeSub {
+  font-size: 11px;
+  color: #bbb;
+  margin-top: 1px;
+}
+
+.apptInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.apptPatient {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.apptDoctor {
+  font-size: 12px;
+  color: #999;
+  margin-top: 1px;
+}
+
+.apptStatus {
+  padding: 5px 14px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Revenue */
+.revenueHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.revenueAmount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.revenueGrowth {
+  font-size: 13px;
+  color: #43A047;
+  font-weight: 600;
+}
+
+.chartSvg {
+  width: 100%;
+  height: 64px;
+  margin: 8px 0 4px;
+  display: block;
+}
+
+.chartLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.chartLabel {
+  font-size: 11px;
+  color: #bbb;
+}
+
+.chartFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.chartFooterLabel {
+  font-size: 12px;
+  color: #999;
+}
+
+.chartFooterRight {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+@media (max-width: 960px) {
+  .statsRow { grid-template-columns: 1fr; }
+  .clinicImageCard { display: none; }
+  .bottomGrid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,161 @@
+/* ─── Base Button ────────────────────────────────────────────────── */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-spring),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    opacity var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+/* ─── Primary ────────────────────────────────────────────────────── */
+.primary {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  box-shadow: var(--shadow-primary-sm);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--gradient-primary-vivid);
+  box-shadow: var(--shadow-primary-md);
+  transform: translateY(-1px);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-primary-sm);
+}
+
+/* ─── Secondary ──────────────────────────────────────────────────── */
+.secondary {
+  background: var(--gradient-secondary);
+  color: #ffffff;
+  box-shadow: var(--shadow-secondary-sm);
+}
+
+.secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #81C784 0%, #43A047 60%, #388E3C 100%);
+  box-shadow: 0 8px 24px rgba(67, 160, 71, 0.38);
+  transform: translateY(-1px);
+}
+
+.secondary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-secondary-sm);
+}
+
+/* ─── Outline ────────────────────────────────────────────────────── */
+.outline {
+  background: transparent;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.outline:hover:not(:disabled) {
+  background: var(--color-primary-subtle);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.16);
+}
+
+.outline:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+  background: var(--color-primary-tint);
+}
+
+/* ─── Ghost ──────────────────────────────────────────────────────── */
+.ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1.5px solid transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.ghost:active:not(:disabled) {
+  background: var(--color-bg-tertiary);
+}
+
+/* ─── Danger ─────────────────────────────────────────────────────── */
+.danger {
+  background: linear-gradient(135deg, #EF5350 0%, #DC2626 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.28);
+}
+
+.danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #F44336 0%, #C62828 100%);
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.36);
+  transform: translateY(-1px);
+}
+
+.danger:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────── */
+.sm {
+  padding: 6px var(--spacing-md);
+  font-size: var(--font-size-xs);
+  min-height: 32px;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.md {
+  padding: 10px var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  min-height: 40px;
+}
+
+.lg {
+  padding: 13px var(--spacing-xl);
+  font-size: var(--font-size-md);
+  min-height: 48px;
+}
+
+/* ─── Full Width ─────────────────────────────────────────────────── */
+.fullWidth {
+  width: 100%;
+}
+
+/* ─── Loading Spinner ────────────────────────────────────────────── */
+.spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btnSpin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes btnSpin {
+  to { transform: rotate(360deg); }
+}

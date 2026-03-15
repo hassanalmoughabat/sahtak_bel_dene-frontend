@@ -1,0 +1,93 @@
+/* ─── Base Avatar ────────────────────────────────────────────────── */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: #ffffff;
+  font-weight: var(--font-weight-bold);
+  overflow: hidden;
+  flex-shrink: 0;
+  user-select: none;
+  position: relative;
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────── */
+.xs {
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+}
+
+.sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--font-size-xs);
+}
+
+.md {
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-size-sm);
+}
+
+.lg {
+  width: 52px;
+  height: 52px;
+  font-size: var(--font-size-lg);
+  box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-primary-tint);
+}
+
+.xl {
+  width: 72px;
+  height: 72px;
+  font-size: var(--font-size-2xl);
+  box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-primary-tint),
+              var(--shadow-primary-sm);
+}
+
+.xxl {
+  width: 96px;
+  height: 96px;
+  font-size: var(--font-size-3xl);
+  box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 7px var(--color-primary-tint),
+              var(--shadow-primary-md);
+}
+
+/* ─── Image ──────────────────────────────────────────────────────── */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Initials ───────────────────────────────────────────────────── */
+.initials {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+/* ─── Status Indicator ───────────────────────────────────────────── */
+.statusDot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 25%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg);
+  background: var(--color-success);
+}
+
+.statusDot.offline {
+  background: var(--color-text-tertiary);
+}
+
+.statusDot.busy {
+  background: var(--color-warning);
+}

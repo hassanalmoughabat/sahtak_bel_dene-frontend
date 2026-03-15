@@ -1,0 +1,83 @@
+/* ─── Base Badge ─────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: 1;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────── */
+.sm {
+  padding: 3px 8px;
+  font-size: var(--font-size-xs);
+}
+
+.md {
+  padding: 5px 12px;
+  font-size: var(--font-size-xs);
+}
+
+/* ─── Variants ───────────────────────────────────────────────────── */
+.default {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+.primary {
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary-dark);
+  border-color: rgba(229, 57, 53, 0.20);
+}
+
+.success {
+  background-color: #D1FAE5;
+  color: var(--color-success-text);
+  border-color: rgba(22, 163, 74, 0.22);
+}
+
+.warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning-text);
+  border-color: rgba(217, 119, 6, 0.22);
+}
+
+.error {
+  background-color: var(--color-error-light);
+  color: var(--color-error-text);
+  border-color: rgba(220, 38, 38, 0.22);
+}
+
+.info {
+  background-color: var(--color-info-light);
+  color: var(--color-info-text);
+  border-color: rgba(37, 99, 235, 0.22);
+}
+
+/* Solid filled variants */
+.solid-primary {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(229, 57, 53, 0.30);
+}
+
+.solid-success {
+  background: var(--gradient-secondary);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(67, 160, 71, 0.30);
+}
