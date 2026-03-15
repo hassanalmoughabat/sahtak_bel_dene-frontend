@@ -29,7 +29,7 @@ body {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
-  background-color: #d4d4d4;
+  background-color: #c8c8c8;
   line-height: var(--line-height-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

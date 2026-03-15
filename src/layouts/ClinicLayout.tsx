@@ -67,6 +67,7 @@ export default function ClinicLayout() {
   };
 
   return (
+    <div className={styles.shell}>
     <div className={styles.layout}>
       <aside className={styles.sidebar}>
         <div className={styles.logoWrap}>
@@ -127,6 +128,7 @@ export default function ClinicLayout() {
           <Outlet />
         </main>
       </div>
+    </div>
     </div>
   );
 }
